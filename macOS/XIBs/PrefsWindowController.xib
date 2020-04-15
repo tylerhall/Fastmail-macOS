@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PrefsWindowController" customModule="Fastmail" customModuleProvider="target">
+            <connections>
+                <outlet property="configPlaceholderLabel" destination="PWD-2E-J6Z" id="1Di-AA-tBb"/>
+                <outlet property="configTextView" destination="Y5g-Ra-NtH" id="a1V-6I-WkL"/>
+                <outlet property="window" destination="6dl-S1-Gm4" id="Agl-wj-96I"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <userDefaultsController representsSharedInstance="YES" id="hO6-Sr-VoI"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" tabbingMode="disallowed" id="6dl-S1-Gm4">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="682" height="547"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" id="6ut-xs-PFi">
+                <rect key="frame" x="0.0" y="0.0" width="682" height="443"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <scrollView borderType="line" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2G-lN-kEY">
+                        <rect key="frame" x="20" y="223" width="642" height="200"/>
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="HnT-4B-pzR">
+                            <rect key="frame" x="1" y="1" width="640" height="198"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Y5g-Ra-NtH">
+                                    <rect key="frame" x="0.0" y="0.0" width="640" height="198"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="minSize" width="640" height="198"/>
+                                    <size key="maxSize" width="642" height="10000000"/>
+                                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-2" id="eXs-KT-JTv"/>
+                                    </connections>
+                                </textView>
+                            </subviews>
+                        </clipView>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="maJ-f0-RzF"/>
+                        </constraints>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="TUt-of-h4j">
+                            <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="1Cb-uI-Qnq">
+                            <rect key="frame" x="625" y="1" width="16" height="198"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PWD-2E-J6Z">
+                        <rect key="frame" x="24" y="408" width="656" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="https://www.fastmail.com/mail/Inbox/?u=12345678 BadgeIndex ShowByDefault" id="8iI-j3-xHJ">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEw-tU-mAy">
+                        <rect key="frame" x="20" y="20" width="642" height="184"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="qXX-OL-NFm">
+                                <rect key="frame" x="-2" y="168" width="399" height="16"/>
+                                <textFieldCell key="cell" title="Configure your accounts in the text view above - one per line." id="rTd-Az-vJ3">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="XPo-Zn-rT8">
+                                <rect key="frame" x="-2" y="144" width="285" height="16"/>
+                                <textFieldCell key="cell" title="1. Enter the fastmail.com URL for your account" id="Jwx-lR-mbn">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-iV-r3x">
+                                <rect key="frame" x="-2" y="104" width="646" height="32"/>
+                                <textFieldCell key="cell" id="cKX-a4-mAv">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">2. Then an integer 1 - 4 corresponding to which corner of the Dock icon you'd like the unread badge to appear. Accounts sharing Dock badges will have their unread counts summed together.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="CIK-3T-hrL">
+                                <rect key="frame" x="-2" y="64" width="646" height="32"/>
+                                <textFieldCell key="cell" title="3. Finally, enter a 1 if you'd like the account to re-open automatically when the app is activated. Enter a 0 to disable." id="JIb-aq-sv3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-l7-aoD">
+                                <rect key="frame" x="-2" y="40" width="383" height="16"/>
+                                <textFieldCell key="cell" title="Separate the three values above with a single space character." id="f1p-TF-GkZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bub-x7-ZhF">
+                                <rect key="frame" x="-2" y="0.0" width="646" height="32"/>
+                                <textFieldCell key="cell" id="iWp-Uj-FJm">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">Oh, and I hope it goes without saying, but this dumb little open source project is in NO way affiliated with or endorsed by the wonderful folks at Fastmail.</string>
+                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="n2G-lN-kEY" firstAttribute="top" secondItem="6ut-xs-PFi" secondAttribute="top" constant="20" id="0v1-0i-TrU"/>
+                    <constraint firstItem="PWD-2E-J6Z" firstAttribute="top" secondItem="n2G-lN-kEY" secondAttribute="top" constant="-1" id="A89-31-i4z"/>
+                    <constraint firstItem="PWD-2E-J6Z" firstAttribute="leading" secondItem="n2G-lN-kEY" secondAttribute="leading" constant="6" id="AiH-Mo-bP0"/>
+                    <constraint firstAttribute="bottom" secondItem="PEw-tU-mAy" secondAttribute="bottom" constant="20" id="DHC-qL-87W"/>
+                    <constraint firstItem="PWD-2E-J6Z" firstAttribute="trailing" secondItem="n2G-lN-kEY" secondAttribute="trailing" constant="16" id="HcE-UI-zOO"/>
+                    <constraint firstItem="PEw-tU-mAy" firstAttribute="leading" secondItem="6ut-xs-PFi" secondAttribute="leading" constant="20" id="KEQ-Od-UQz"/>
+                    <constraint firstAttribute="trailing" secondItem="n2G-lN-kEY" secondAttribute="trailing" constant="20" id="Q9c-DP-e3J"/>
+                    <constraint firstItem="n2G-lN-kEY" firstAttribute="leading" secondItem="6ut-xs-PFi" secondAttribute="leading" constant="20" id="fJy-Ca-89A"/>
+                    <constraint firstItem="PEw-tU-mAy" firstAttribute="top" secondItem="Y5g-Ra-NtH" secondAttribute="bottom" constant="20" id="qSv-6z-e6q"/>
+                    <constraint firstAttribute="trailing" secondItem="PEw-tU-mAy" secondAttribute="trailing" constant="20" id="tKA-kB-PBf"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="-170" y="-64.5"/>
+        </window>
+    </objects>
+</document>
