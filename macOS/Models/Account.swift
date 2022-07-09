@@ -22,6 +22,8 @@ class Account {
     var hiddenWebView: HiddenWebView
 
     var windowMenuItem: NSMenuItem?
+    var accountLoginCallback: (() -> ())?
+    var isLoggedIn: Bool;
 
     var inboxCount = 0 {
         didSet {
@@ -44,6 +46,7 @@ class Account {
         self.hiddenWebView = HiddenWebView()
         
         self.windowController = AccountWindowController(windowNibName: String(describing: AccountWindowController.self))
+        self.isLoggedIn = false
 
         self.hiddenWebView.account = self
         self.windowController.account = self
@@ -57,6 +60,14 @@ class Account {
     func showWindow() {
         windowController.showWindow(nil)
     }
+        
+    func mailTo(_ mailTo: [String: String]){
+        var mailToUrl = self.url
+        mailToUrl.appendPathComponent("compose")
+        let finalMailToUrl = mailToUrl.appendingQueryItems(mailTo)
+        windowController.webView.load(URLRequest(url: finalMailToUrl))
+    }
+
 }
 
 extension Account {
@@ -74,6 +85,8 @@ extension Account {
                         timer.invalidate()
                         self.setupHiddenWebView()
                         self.name = (val as? String) ?? "Fastmail"
+                        self.isLoggedIn = true
+                        self.accountLoginCallback?()
                     }
                 }
             }

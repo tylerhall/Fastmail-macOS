@@ -261,3 +261,17 @@ extension NSEvent {
         return rightClick || controlClick
     }
 }
+
+extension URL {
+    func appendingQueryItems(_ queryItems: [String: String]) -> URL {
+        var urlAbsString = self.absoluteString
+        var separator = (self.query == nil) ? "?" : "&"
+        
+        for (k, v) in queryItems {
+            urlAbsString += separator + k + "=" + v.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+            separator = "&"
+        }
+        return URL(string: urlAbsString) ?? self;
+    }
+    
+}
