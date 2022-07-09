@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50E6005B286DF4060077CA5F /* NSString+DJL.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E60056286DF4060077CA5F /* NSString+DJL.m */; };
+		50E6005C286DF4060077CA5F /* NSDictionary+DJL.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E60057286DF4060077CA5F /* NSDictionary+DJL.m */; };
+		50E6005D286DF4060077CA5F /* DJLURLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E60058286DF4060077CA5F /* DJLURLHandler.m */; };
+		50E60060286DFBBA0077CA5F /* NSURL+DJL.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6005E286DFBBA0077CA5F /* NSURL+DJL.m */; };
 		C6A2C6F52423D44B00DAA557 /* getInboxCount.js in Resources */ = {isa = PBXBuildFile; fileRef = C6A2C6F42423D44B00DAA557 /* getInboxCount.js */; };
 		C6A2C6F82423DA8700DAA557 /* New Mail.aiff in Resources */ = {isa = PBXBuildFile; fileRef = C6A2C6F72423DA8700DAA557 /* New Mail.aiff */; };
 		C6A2C6FB2423DA9000DAA557 /* Mail Sent.aiff in Resources */ = {isa = PBXBuildFile; fileRef = C6A2C6FA2423DA9000DAA557 /* Mail Sent.aiff */; };
@@ -44,6 +48,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		50E60041286BA8E20077CA5F /* Fastmail-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fastmail-Bridging-Header.h"; sourceTree = "<group>"; };
+		50E60055286DF4060077CA5F /* DJLURLHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJLURLHandler.h; sourceTree = "<group>"; };
+		50E60056286DF4060077CA5F /* NSString+DJL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DJL.m"; sourceTree = "<group>"; };
+		50E60057286DF4060077CA5F /* NSDictionary+DJL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DJL.m"; sourceTree = "<group>"; };
+		50E60058286DF4060077CA5F /* DJLURLHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJLURLHandler.m; sourceTree = "<group>"; };
+		50E60059286DF4060077CA5F /* NSDictionary+DJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DJL.h"; sourceTree = "<group>"; };
+		50E6005A286DF4060077CA5F /* NSString+DJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DJL.h"; sourceTree = "<group>"; };
+		50E6005E286DFBBA0077CA5F /* NSURL+DJL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DJL.m"; sourceTree = "<group>"; };
+		50E6005F286DFBBA0077CA5F /* NSURL+DJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DJL.h"; sourceTree = "<group>"; };
 		C6A2C6F42423D44B00DAA557 /* getInboxCount.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = getInboxCount.js; sourceTree = "<group>"; };
 		C6A2C6F72423DA8700DAA557 /* New Mail.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "New Mail.aiff"; sourceTree = "<group>"; };
 		C6A2C6FA2423DA9000DAA557 /* Mail Sent.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "Mail Sent.aiff"; sourceTree = "<group>"; };
@@ -90,6 +103,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		50E60054286DF4060077CA5F /* DejaLu */ = {
+			isa = PBXGroup;
+			children = (
+				50E60055286DF4060077CA5F /* DJLURLHandler.h */,
+				50E60058286DF4060077CA5F /* DJLURLHandler.m */,
+				50E60059286DF4060077CA5F /* NSDictionary+DJL.h */,
+				50E60057286DF4060077CA5F /* NSDictionary+DJL.m */,
+				50E6005A286DF4060077CA5F /* NSString+DJL.h */,
+				50E60056286DF4060077CA5F /* NSString+DJL.m */,
+				50E6005F286DFBBA0077CA5F /* NSURL+DJL.h */,
+				50E6005E286DFBBA0077CA5F /* NSURL+DJL.m */,
+			);
+			path = DejaLu;
+			sourceTree = "<group>";
+		};
 		C6FF2574241A866F00C896DA = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +138,7 @@
 		C6FF257F241A866F00C896DA /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				50E60054286DF4060077CA5F /* DejaLu */,
 				C6FF2580241A866F00C896DA /* AppDelegate.swift */,
 				C6FF25C9241A8EB300C896DA /* Constants.swift */,
 				C6A2C6FD2423DBB200DAA557 /* Notifications.swift */,
@@ -123,6 +152,7 @@
 				C6FF2582241A867400C896DA /* Assets.xcassets */,
 				C6FF2587241A867400C896DA /* Info.plist */,
 				C6FF2588241A867400C896DA /* macOS.entitlements */,
+				50E60041286BA8E20077CA5F /* Fastmail-Bridging-Header.h */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -209,10 +239,11 @@
 				TargetAttributes = {
 					C6FF257C241A866F00C896DA = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
-			buildConfigurationList = C6FF2578241A866F00C896DA /* Build configuration list for PBXProject "DefaultApp" */;
+			buildConfigurationList = C6FF2578241A866F00C896DA /* Build configuration list for PBXProject "Fastmail" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -260,10 +291,14 @@
 				C6A5766E24242A1100B624AB /* HiddenWebView.swift in Sources */,
 				C6FF25CC241A92AD00C896DA /* Extensions.swift in Sources */,
 				C6FF25D1241A932F00C896DA /* PrefsWindowController.swift in Sources */,
+				50E60060286DFBBA0077CA5F /* NSURL+DJL.m in Sources */,
+				50E6005C286DF4060077CA5F /* NSDictionary+DJL.m in Sources */,
+				50E6005D286DF4060077CA5F /* DJLURLHandler.m in Sources */,
 				C6FF25AB241A8B8600C896DA /* AccountWindowController.swift in Sources */,
 				C6A2C6FE2423DBB200DAA557 /* Notifications.swift in Sources */,
 				C6FF25CA241A8EB300C896DA /* Constants.swift in Sources */,
 				C6AE9BE42429BD590052676D /* EmailMemory.swift in Sources */,
+				50E6005B286DF4060077CA5F /* NSString+DJL.m in Sources */,
 				C6AE9BDB2429AE9C0052676D /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -424,6 +460,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.tyler.Fastmail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "macOS/Fastmail-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -433,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +497,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.tyler.Fastmail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "macOS/Fastmail-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -466,7 +506,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C6FF2578241A866F00C896DA /* Build configuration list for PBXProject "DefaultApp" */ = {
+		C6FF2578241A866F00C896DA /* Build configuration list for PBXProject "Fastmail" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6FF2589241A867400C896DA /* Debug */,
